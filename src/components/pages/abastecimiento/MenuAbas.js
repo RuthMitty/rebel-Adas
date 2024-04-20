@@ -1,26 +1,25 @@
 import React from "react";
 import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { SOLICITUD_ABAS } from "../solicitudAbas";
 
-export default function Menu(){
+export default function Menu({ navigation }){
     return(
         <View style={styles.navContainer}>
             <TouchableOpacity style={styles.contIcon}>
-                <Image style={styles.icons} source={require("./assets/icons/instructivos.png")}/>
+                <Image style={styles.icons} source={require("../../../../assets/icons/instructivos.png")}/>
                 <Text style={styles.textButton}>Manuales</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.contIcon}>
-                <Image style={styles.icons}  source={require("./assets/icons/task.png")}/>
+            <TouchableOpacity style={styles.contIcon} onPress={() => navigation.navigate(SOLICITUD_ABAS)}>
+                <Image style={styles.icons}  source={require("../../../../assets/icons/task.png")}/>
                 <Text style={styles.textButton}>Más</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.contIcon}>
-                <Image style={styles.icons} source={require("./assets/icons/manuales.png")}/>
+                <Image style={styles.icons} source={require("../../../../assets/icons/manuales.png")}/>
                 <Text style={styles.textButton}>Reportes</Text>
             </TouchableOpacity>
         </View>
     );
 }
-
-
 
 const styles = StyleSheet.create({
     navContainer: {
@@ -50,6 +49,4 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white'
     }
-
 })
-
