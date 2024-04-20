@@ -4,7 +4,6 @@ import LoginForm from './src/components/LoginForm';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Comunicación</Text>
       <LoginForm/>
     </View>
   );
