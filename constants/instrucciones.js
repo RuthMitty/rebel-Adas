@@ -26,7 +26,7 @@ const instrucciones = [
     }, 
     { 
         numPaso: "6. ", 
-        texto: "Se accidentó la ambulancia", 
+        texto: "Se accidentó la ambulancia, se notificó la emergencia", 
         hora: "12:40"
     },
     { 
@@ -38,6 +38,11 @@ const instrucciones = [
         numPaso: "8. ", 
         texto: "Se dió atención médica al gerente de contabilidad, se usaron 2 jeringas y 3 vendas", 
         hora: "12:20"
+    },
+    {
+        numPaso: "9.",
+        texto: "Nada",
+        hora: "--:--"
     }
 ]
 

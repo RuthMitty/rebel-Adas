@@ -19,16 +19,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         minHeight: 'auto',
-        paddingVertical: 10
+        paddingVertical: 10,
+        justifyContent: 'space-around'
     },
     texto: {
         fontSize: 20,
         color: 'black',
-        maxWidth: 'auto',
+        maxWidth: '60%',
         flexWrap: 'wrap'
     },
     crono: {
-        alignSelf: 'flex-end',
-        minWidth: 'auto'
+        minWidth: 'auto',
+        justifyContent: 'flex-end'
     }
 });

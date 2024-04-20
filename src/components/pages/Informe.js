@@ -20,7 +20,7 @@ export default function Informe(){
                 />
             </View>
             <Text style={estilos.subtitle}>Cronograma</Text>
-            <FlatList 
+            <FlatList
                 data={instrucciones}
                 keyExtractor = {
                     instruccion => instruccion.numPaso.toString()
@@ -29,19 +29,13 @@ export default function Informe(){
                     <Step componente={item}/>
                 )}
             />
-            <Text>9.</Text>
-            <TextInput style={styles.inputt}></TextInput>
-            <text
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    inputt: {
-        borderColor: '#88786F',
-        borderWidth: 1,
-        paddingHorizontal: 5,
-        paddingVertical: 10
+    cont:{
+        
     },
     contenedor: {
         top: 80,
@@ -53,6 +47,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#F8F9EA",
         fontSize: 24,
         padding:8,
-        borderRadius: 8
+        borderRadius: 8,
+        marginVertical: 8
     }
 });
