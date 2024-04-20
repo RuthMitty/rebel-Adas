@@ -1,15 +1,12 @@
 import React from "react";
-import { View, StyleSheet} from "react-native";
+import { View, StyleSheet, TouchableOpacity} from "react-native";
 import Menu from "./MenuAbas";
 import CardAlerta from '../../CardAlerta';
-import { REA_ABAS } from "./ReaAbas";
 
 export default function HomeAbas({ navigation }){
     return(
-        <View style={{flex: 1}}>
-            <View style={styles.container}>
-            <CardAlerta tipo="solicitud" subtitulo="Area" incidente="Nombre del incidente" onPress={() => navigation.navigate(REA_ABAS)}/>
-            </View>
+        <View style={styles.container}>
+            <CardAlerta tipo="solicitud" subtitulo="Area" incidente="Nombre del incidente" navigation={navigation}/>
             <Menu navigation={navigation}/>
         </View>
     );
