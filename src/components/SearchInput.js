@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         borderColor: '#88786F',
         borderWidth: 1.5,
         alignItems: "center",
-        width: "50%",
+        width: "70%",
         justifyContent: "space-around"
     },
     textImput: {

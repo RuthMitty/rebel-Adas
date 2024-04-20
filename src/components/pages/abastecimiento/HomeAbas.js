@@ -1,12 +1,14 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity} from "react-native";
+import { View, StyleSheet} from "react-native";
 import Menu from "./MenuAbas";
 import CardAlerta from '../../CardAlerta';
 
 export default function HomeAbas({ navigation }){
     return(
-        <View style={styles.container}>
-            <CardAlerta tipo="solicitud" subtitulo="Area" incidente="Nombre del incidente" navigation={navigation}/>
+        <View style={{flex: 1}}>
+            <View style={styles.container}>
+                <CardAlerta tipo="solicitud" subtitulo="Area" incidente="Nombre del incidente" navigation={navigation}/>
+            </View>
             <Menu navigation={navigation}/>
         </View>
     );
@@ -14,7 +16,6 @@ export default function HomeAbas({ navigation }){
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         marginTop: 30,
         marginBottom: 30,
         alignItems: "center"

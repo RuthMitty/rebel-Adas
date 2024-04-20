@@ -1,11 +1,12 @@
 import React from "react";
 import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import { SOLICITUD_ABAS } from "./solicitudAbas";
+import { MANUALS } from "../Manuales";
 
 export default function Menu({ navigation }){
     return(
         <View style={styles.navContainer}>
-            <TouchableOpacity style={styles.contIcon}>
+            <TouchableOpacity style={styles.contIcon} onPress={() => navigation.navigate(MANUALS)}>
                 <Image style={styles.icons} source={require("../../../../assets/icons/instructivos.png")}/>
                 <Text style={styles.textButton}>Manuales</Text>
             </TouchableOpacity>
