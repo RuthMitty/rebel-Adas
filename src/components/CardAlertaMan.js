@@ -1,12 +1,12 @@
-import { View , Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import { View , Text, StyleSheet, TouchableOpacity} from 'react-native';
 import estilos from '../../constants/estilos';
-import { REA_ABAS } from './pages/abastecimiento/ReaAbas';
+import { SOL_MAN } from './pages/mantenimiento/SolicitudMan';
 
 export default function CardAlerta({tipo, subtitulo, incidente, navigation}){
     return(
         <TouchableOpacity style={styles.contenedor}
         onPress={() => {
-            navigation.navigate(REA_ABAS)
+            navigation.navigate(SOL_MAN)
         }}>
             <Text style={estilos.title}>{tipo === "emergencia" ? "Emergencia" : "Solicitud"}</Text>
             <View>

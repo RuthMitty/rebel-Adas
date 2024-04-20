@@ -1,36 +1,45 @@
 import React from "react";
-import { View} from 'react-native';
-// import LoginForm from './src/components/LoginForm';
-// import Menu from './src/components/Menu';
+import LoginForm from './src/components/LoginForm';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
-import SolicitudAbas, { SOLICITUD_ABAS } from "./src/components/pages/solicitudAbas";
-import HomeAbas from "./src/components/pages/HomeAbas";
-import Menu from "./src/components/pages/abastecimiento/MenuAbas";
-import TopBar from './src/components/TopBar';
-// import CardAlerta from './src/components/CardAlerta';
-// import Cronograma from "./src/components/Cronograma";
-import Informe from "./src/components/pages/Informe";
+import SolicitudAbas, { SOLICITUD_ABAS } from "./src/components/pages/abastecimiento/solicitudAbas";
+import ReaAbas, { REA_ABAS } from "./src/components/pages/abastecimiento/ReaAbas";
+import HomeAbas from "./src/components/pages/abastecimiento/HomeAbas";
+import Manuals, { MANUALS } from "./src/components/pages/Manuales";
+import Reports, { REPORTS} from "./src/components/pages/Reportes";
+import HomeMan from "./src/components/pages/mantenimiento/HomeMan";
+import MasMan, { MASMAN } from "./src/components/pages/mantenimiento/MasMan";
+import SolicitudMan, { SOL_MAN } from "./src/components/pages/mantenimiento/SolicitudMan";
+// import TopBar from './src/components/TopBar';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-      // <View>
-      //   {/* <LoginForm/>
-      //   <Menu/> */}
-      //   <SolicitudAbas/>
-      // </View>
-    //   <NavigationContainer >
-    //   <Stack.Navigator initialRouteName="Home Abas">
-    //   <Stack.Screen name="Home Abas" component={HomeAbas} />
-    //     <Stack.Screen name={SOLICITUD_ABAS} component={SolicitudAbas} />
-    //     <CardAlerta tipo="emergencia" incidente="Incendio en la torre más alta de la empresa"/>
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-      <View>
-        <TopBar/>
-        <Informe />
-        <Menu/>
-      </View>
+      //Login  
+      //*<NavigationContainer >
+      //   <Stack.Navigator initialRouteName="Login">
+      //     <Stack.Screen name="Home Abastecimiento" component={LoginForm} />
+      //   </Stack.Navigator>
+      // </NavigationContainer>
+      //Abmitración 
+      //   <NavigationContainer >
+      //     <Stack.Navigator initialRouteName="Home Abastecimiento">
+      //     <Stack.Screen name="Home Abastecimiento" component={HomeAbas} />
+      //       <Stack.Screen name={SOLICITUD_ABAS} component={SolicitudAbas} />
+      //       <Stack.Screen name={MANUALS} component={Manuals} />
+      //       <Stack.Screen name={REPORTS} component={Reports} />
+      //       <Stack.Screen name={REA_ABAS} component={ReaAbas} />
+      //     </Stack.Navigator>
+      // </NavigationContainer>
+      //Mantenimiento
+      <NavigationContainer >
+      <Stack.Navigator initialRouteName="Home Abastecimiento">
+      <Stack.Screen name="Home Abastecimiento" component={HomeMan} />
+        <Stack.Screen name={SOL_MAN} component={SolicitudMan} />
+        <Stack.Screen name={MANUALS} component={Manuals} />
+        <Stack.Screen name={REPORTS} component={Reports} />
+        <Stack.Screen name={MASMAN} component={MasMan} />
+      </Stack.Navigator>
+  </NavigationContainer>
   );
 }
