@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
-import { SOLICITUD_ABAS } from "../solicitudAbas";
+import { SOLICITUD_ABAS } from "./solicitudAbas";
 
 export default function Menu({ navigation }){
     return(
